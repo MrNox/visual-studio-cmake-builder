@@ -1,32 +1,32 @@
 # Visual Studio CMake builder
 Visual Studio CMake builder is a script to build a CMake project created by Visual Studio.
 
-## Accidentally delete a x86|x64-release|debug directory and Visual Studio does not fix it?
+## Do you have any issues as me using Visual Studio to compile your code?
 This script can help you :D
 
 ## How works?
 The script search the VS installations saving them in a file in the root project directory called vs_paths.txt and asks to you which use, if you delete it the script will search again the VS installations. Furthermore, asks to you if you want to build x86 or x64 or both in 'Release' mode.
 
-For clang.exe support purpose, is necessary delete all out\build\. files recursively and/or directories and the script does it, so is important that you know it.
+For `clang.exe`support purpose, is necessary delete all `out\build\*` files recursively and/or directories and the script does it, so is important that you know it.
 
-You can modify the compiler such as `cl.exe` or `clang.exe` in code:
+You can modify the compiler to use by the script such as `cl.exe` or `clang.exe`, or another one in code:
 
 ```
 set _CC=cl.exe
 set _CXX=cl.exe
 ```
 
-This script is easily modifiable and you can avoid some question by script to adapt it to your need, ex  
+This script is easily modifiable and you can avoid some question by the script or add features to adapt it to your need. Don't forget send me a pull request :)
 
 ## How execute it?
-Only is necesary copy the build.cmd to project root directory and execute it.
+Only is necesary copy the `build.cmd` to project root directory and execute it.
 
 - First, create a CMake project
 \
 \
 ![Drag Racing](images/new_cmake_project.png)
 
-- Copy the build.cmd script file
+- Copy the `build.cmd` script file
 
 ```
 D:\test>dir
