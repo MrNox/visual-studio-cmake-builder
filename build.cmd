@@ -5,7 +5,7 @@ set _CC=cl.exe
 set _CXX=cl.exe
 
 if not exist "vs_paths.txt" (
-    where /R %SYSTEMDRIVE% devenv.exe > vs_paths.txt
+    where /R %SYSTEMDRIVE%\ devenv.exe > vs_paths.txt
 )
 
 set current_dir=%~dp0
